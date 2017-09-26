@@ -38,7 +38,7 @@ AllBuses = data['Siri']['ServiceDelivery']['VehicleMonitoringDelivery'][0]['Vehi
 
 Buses = len(AllBuses)
 type(BusRef)
-print ('Bus Line : {}'.format('B52')) 
+print ('Bus Line : {}'.format(BusRef)) 
 print ('Number of Active Buses : {}'.format(Buses)) 
 BusCounter = 0
 for it in AllBuses:
