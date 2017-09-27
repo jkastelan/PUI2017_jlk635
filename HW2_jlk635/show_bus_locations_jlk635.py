@@ -42,8 +42,8 @@ print ('Bus Line : {}'.format(BusRef))
 print ('Number of Active Buses : {}'.format(Buses)) 
 BusCounter = 0
 for it in AllBuses:
-    Lat = str(it['MonitoredVehicleJourney']['VehicleLocation']['Longitude'])
-    Lon = str(it['MonitoredVehicleJourney']['VehicleLocation']['Latitude'])
+    Lon = str(it['MonitoredVehicleJourney']['VehicleLocation']['Longitude'])
+    Lat = str(it['MonitoredVehicleJourney']['VehicleLocation']['Latitude'])
     print ('Bus {} is at latitude {} and longitude {}'.format(BusCounter,Lat, Lon))
     BusCounter += 1
 
