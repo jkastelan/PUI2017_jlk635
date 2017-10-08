@@ -30,6 +30,7 @@ Jon pulled in Citi Bike data from December 2016. The data contains the relevant 
 __Option 1:__
 Jon could test his hypothesis by conducting a two-sample Z-test of proportions. The formula for this test would be as follows:
 Z = p(subs) - p(custs) / sqrt( p(all) x ( 1/n(subs) + 1/n(custs) ) )
+
 $$ Z = \frac{p_{subs} - p_{custs}}{\sqrt{p_{all} * (\frac{1}{/n_{subs}} + \frac{1}{/n_{custs}})}} $$
 
 One caveat with this approach is that the Z test expects the proportions of the variable of interest to be normally distributed. This may be a reasonable assumption but it should be checked. It's entirely possible that the `Trip duration` variable is normally distributed. However the `Over45` binary variable will not be normally distributed.
