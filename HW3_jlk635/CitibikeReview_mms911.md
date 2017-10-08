@@ -2,7 +2,7 @@
 
 The research question is clear.
 Jon is interested in comparing trip duration for subscribers and customers. Specifically, he is interested to find out if subscribers are less likely to have a trip duration that is less than 45 minutes compared to customers. 
----
+
 
 ## The Hypotheses
 
@@ -22,7 +22,7 @@ Jon pulled in Citi Bike data from December 2016. The data contains the relevant 
 	- `Trip Duration`,
 	- `User Type`, and
 	- `Over45`,a user-defined binary variable which labels cases that had a trip duraction greater than or equal to 45 minutes as "Over45" and those 	cases whose trip duration was less than 45 as "Under45"
----
+
 
 
 ## The Statistical Test
@@ -35,9 +35,10 @@ One caveat with this approach is that the Z test expects the proportions of the 
 
 __Option 2:__
 Given that Jon's has classfied each case into a binary, categorical variable (`Over45`) and is seeking to test if two groups differ on the rate at which they fall into these two categories (or proportion), it is reasonable for Jon to use the $\chi^2$ to test for equality of proportions.
----
+
 
 ## Other Interesting Variations
+
 Since the alloted time per trip is different for the two groups (subscribers = 45 mins, customers = 30 mins), it may be interesting to ask a different question that takes this into considerations. For example, Jon might ask,
 > "Are subscribers less likely to go over their alloted time compared to customers?"
 
