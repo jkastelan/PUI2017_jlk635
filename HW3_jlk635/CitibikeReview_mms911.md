@@ -44,3 +44,4 @@ Given that Jon's has classfied each case into a binary, categorical variable (`O
 Since the alloted time per trip is different for the two groups (subscribers = 45 mins, customers = 30 mins), it may be interesting to ask a different question that takes this into considerations. For example, Jon might ask,
 > "Are subscribers less likely to go over their alloted time compared to customers?"
 
+# FBB very good, this should be of help to your classmate
