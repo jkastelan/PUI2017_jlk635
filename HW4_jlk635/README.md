@@ -24,6 +24,11 @@ Logistic Regression |	7, Daily consumption of vegetables, fruits, or berries; Ph
   |||||||||
 
 
+  # FBB why did you look for a paper not on PLOS one? I specifically indicated to look for papers on plos one. the statistical significance you state for the Log Reg 0.05 I cannnot find in the paper. Plos One is rigorous about these things and would likely not acceot a paper that does not explicitly state the significance ahead of time
+  
+#   otherwise good
+
+
 ## Assignment 3
 
 ### I worked with Andrew Nell and Alex Ross to complete the hypothesis tests on difference in proportions and chi-square test for difference in factors
