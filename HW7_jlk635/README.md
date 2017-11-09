@@ -1,7 +1,7 @@
 # Homework 7
 # Jonathan Kastelan
 
-I worked predominantly by myself with help from Andrew Nell, Prince Abunku and reference code from FBB.
+I worked with Andrew Nell, and some assistance from Prince Abunku and reference code from FBB.
 
 ## Assignment 1
 
