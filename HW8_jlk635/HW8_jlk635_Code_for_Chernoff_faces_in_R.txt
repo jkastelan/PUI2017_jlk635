@@ -1,0 +1,248 @@
+
+# Install and load packages needed to produce the Chernoff faces
+install.packages("data.table",  repos='http://cran.us.r-project.org', dependencies=TRUE)
+install.packages("aplpack",  repos='http://cran.us.r-project.org', dependencies=TRUE)
+library(data.table)
+library(aplpack)
+
+# Read data (previously extracted from World Bank website (World Development Indicators (WDI))
+dfCUSPCountries <- fread('https://raw.githubusercontent.com/jkastelan/PUI2017_jlk635/master/HW8_jlk635/World_Bank_CUSP_data_2012_PUI_HW8.csv')
+head(dfCUSPCountries)
+
+
+## Remove footer (source of data), and convert to a dataframe
+dfCUSPtrim <- data.frame(dfCUSPCountries[0:25])
+
+
+#Obtain columns names
+names(dfCUSPtrim)
+
+#Change columns names to make shorter and specific
+names(dfCUSPtrim) <- c('CountryName', 'CountryCode' ,'CO2emissionsKt' ,'DeathRatePerThousandCrude', 
+                       'GDPperCapitaPPP2011' ,'NewBusiRegistCount' ,'RandDResearchersPerMil', 
+                       'UnemploymentPct' ,'RefugeePopulation' ,'CellSubscrPerHundredPeople' ,'InternetUsagePct', 
+                       'PopulationTotal' ,'JournalArticlesCount' ,'ArmedForcesTotal' ,'RailLinesTotalKm', 
+                       'FertilityRateBirthsPerWoman' ,'HomicidesPer100000people' ,'PovertyRatioPct', 
+                       'AdolescentsOutOfSchool' ,'AirPassengersCount')
+
+
+#change country names
+dfCUSPtrim[10,"CountryName"] <- "South Korea"
+dfCUSPtrim[13,"CountryName"] <- "Russia"
+
+
+#Reorder dataframe in alphabetical order based on CountryName
+dfCUSPtrim <- dfCUSPtrim[order(dfCUSPtrim$CountryName),]
+
+#Set row index equal to CountryName
+rownames(dfCUSPtrim) <- dfCUSPtrim$CountryName
+head(dfCUSPtrim)
+
+#Obtain descriptive statistics for variables
+summary(dfCUSPtrim)
+
+
+transform(dfCUSPtrim, NewBusiRegistCount = as.numeric(NewBusiRegistCount), 
+               RandDResearchersPerMil = as.numeric(RandDResearchersPerMil),
+               UnemploymentPct = as.numeric(UnemploymentPct), 
+               RailLinesTotalKm = as.numeric(RailLinesTotalKm),
+               HomicidesPer100000people = as.numeric(HomicidesPer100000people), 
+               PovertyRatioPct = as.numeric(PovertyRatioPct),
+               AdolescentsOutOfSchool = as.numeric(AdolescentsOutOfSchool), 
+               AirPassengersCount = as.numeric(AirPassengersCount))
+
+
+#Review mean and median of New Business Registration by Country (ignoring the NA values)
+medNewBusiRegistCount <- median(as.numeric(dfCUSPtrim$NewBusiRegistCount), na.rm=TRUE)
+meanNewBusiRegistCount <- mean(as.numeric(dfCUSPtrim$NewBusiRegistCount), na.rm=TRUE)
+print(paste('Median of New businesses registered is: ',  medNewBusiRegistCount))
+print(paste('Mean of New businesses registered is: ',  meanNewBusiRegistCount))
+
+#Review mean and median of R&D researchers per million people by Country (ignoring the NA values)
+medRandDResearchersPerMil <- median(as.numeric(dfCUSPtrim$RandDResearchersPerMil), na.rm=TRUE)
+meanRandDResearchersPerMil <- mean(as.numeric(dfCUSPtrim$RandDResearchersPerMil), na.rm=TRUE)
+print(paste('Median of R&D researchers per million people is: ',  medRandDResearchersPerMil))
+print(paste('Mean of R&D researchers per million people is: ',  meanRandDResearchersPerMil))
+
+#Review mean and median of Unemployment rate by Country (ignoring the NA values)
+medUnemploymentPct <- median(as.numeric(dfCUSPtrim$UnemploymentPct), na.rm=TRUE)
+meanUnemploymentPct <- mean(as.numeric(dfCUSPtrim$UnemploymentPct), na.rm=TRUE)
+print(paste('Median of Unemployment rate is: ',  medUnemploymentPct))
+print(paste('Mean of Unemployment rate is: ',  meanUnemploymentPct))
+
+# Review mean, median and quantiles of Total Rail Line km's by Country (ignoring the NA values) 
+# we can adjust for 'small' and 'large' countries, by landmass
+# A different technique is used for this variable, because rail lines length correlates well with country size (in area)
+medRailLinesTotalKm <- median(as.numeric(dfCUSPtrim$RailLinesTotalKm), na.rm=TRUE)
+meanRailLinesTotalKm <- mean(as.numeric(dfCUSPtrim$RailLinesTotalKm), na.rm=TRUE)
+tinyRailLinesTotalKm <- as.numeric(quantile(as.numeric(dfCUSPtrim$RailLinesTotalKm), na.rm=TRUE)[1])
+smallRailLinesTotalKm <- as.numeric(quantile(as.numeric(dfCUSPtrim$RailLinesTotalKm), na.rm=TRUE)[2])
+largeRailLinesTotalKm <- as.numeric(quantile(as.numeric(dfCUSPtrim$RailLinesTotalKm), na.rm=TRUE)[4])
+print('The quantiles for Total Rail Line kms are: ')
+quantile(as.numeric(dfCUSPtrim$RailLinesTotalKm), na.rm=TRUE)
+print(paste('Median of Total Rail Line kms is: ',  medRailLinesTotalKm))
+print(paste('Mean of Total Rail Line kms is: ',  meanRailLinesTotalKm))
+print(paste('Total Rail Line kms for tiny country is: ',  tinyRailLinesTotalKm ))
+print(paste('Total Rail Line kms for small country is: ',  smallRailLinesTotalKm ))
+print(paste('Total Rail Line kms for large country is: ',  largeRailLinesTotalKm ))
+
+#Review mean and median of Intentional homicides per 100,000 people by Country (ignoring the NA values)
+medHomicidesPer100000people <- median(as.numeric(dfCUSPtrim$HomicidesPer100000people), na.rm=TRUE)
+meanHomicidesPer100000people <- mean(as.numeric(dfCUSPtrim$HomicidesPer100000people), na.rm=TRUE)
+print(paste('Median of Intentional homicides per 100,000 people is: ',  medHomicidesPer100000people))
+print(paste('Mean of Intentional homicides per 100,000 people is: ',  meanHomicidesPer100000people))
+
+#Review mean and median of Poverty headcount ratio less than $1.90 a day (2011 PPP) by Country (ignoring the NA values)
+medPovertyRatioPct <- median(as.numeric(dfCUSPtrim$PovertyRatioPct), na.rm=TRUE)
+meanPovertyRatioPct <- mean(as.numeric(dfCUSPtrim$PovertyRatioPct), na.rm=TRUE)
+print(paste('Median of Poverty headcount ratio is: ',  medPovertyRatioPct))
+print(paste('Mean of Poverty headcount ratio is: ',  meanPovertyRatioPct))
+
+#Review mean and median of Adolescents out of school (% of lower secondary school age) by Country (ignoring the NA values)
+medAdolescentsOutOfSchool <- median(as.numeric(dfCUSPtrim$AdolescentsOutOfSchool), na.rm=TRUE)
+meanAdolescentsOutOfSchool <- mean(as.numeric(dfCUSPtrim$AdolescentsOutOfSchool), na.rm=TRUE)
+print(paste('Median of Adolescents out of school is: ',  medAdolescentsOutOfSchool))
+print(paste('Mean of Adolescents out of school is: ',  meanAdolescentsOutOfSchool))
+
+#Review mean and median of Air Passenger Count by Country (ignoring the NA values)
+medAirPassengersCount <- median(as.numeric(dfCUSPtrim$AirPassengersCount), na.rm=TRUE)
+meanAirPassengersCount <- mean(as.numeric(dfCUSPtrim$AirPassengersCount), na.rm=TRUE)
+print(paste('Median of Air Passenger count is: ',  medAirPassengersCount))
+print(paste('Mean of Air Passenger count is: ',  meanAirPassengersCount))
+
+
+### The next section assigns values (e.g. median, mean, or quantiles) for missing data
+### We want a complete dataset to produce the Chernoff faces
+
+# Assign values for missing data for Argentina
+dfCUSPtrim["Argentina","HomicidesPer100000people"] <- medHomicidesPer100000people
+dfCUSPtrim["Argentina",]
+
+# Assign values for missing data for Armenia
+dfCUSPtrim["Armenia","RandDResearchersPerMil"] <- meanRandDResearchersPerMil
+dfCUSPtrim["Armenia","AdolescentsOutOfSchool"] <- medAdolescentsOutOfSchool
+dfCUSPtrim["Armenia",]
+
+# Assign values for missing data for Australia
+dfCUSPtrim["Australia","RandDResearchersPerMil"]  <- meanRandDResearchersPerMil
+dfCUSPtrim["Australia","RailLinesTotalKm"] <- largeRailLinesTotalKm
+dfCUSPtrim["Australia","PovertyRatioPct"] <- medPovertyRatioPct
+dfCUSPtrim["Australia",]
+
+# Assign values for missing data for Brazil
+dfCUSPtrim["Brazil","RandDResearchersPerMil"]  <- meanRandDResearchersPerMil
+dfCUSPtrim["Brazil",]
+
+# Assign values for missing data for Canada
+dfCUSPtrim["Canada","PovertyRatioPct"] <- medPovertyRatioPct
+dfCUSPtrim["Canada","AdolescentsOutOfSchool"] <- medAdolescentsOutOfSchool
+dfCUSPtrim["Canada",]
+
+# Assign values for missing data for Chile
+dfCUSPtrim["Chile","PovertyRatioPct"] <- medPovertyRatioPct
+dfCUSPtrim["Chile",]
+
+# Assign values for missing data for China
+dfCUSPtrim["China","NewBusiRegistCount"] <- medNewBusiRegistCount
+dfCUSPtrim["China","AdolescentsOutOfSchool"] <- medAdolescentsOutOfSchool
+dfCUSPtrim["China",]
+
+# Assign values for missing data for Colombia
+dfCUSPtrim["Colombia","RailLinesTotalKm"] <- medRailLinesTotalKm
+dfCUSPtrim["Colombia",]
+
+# Assign values for missing data for Costa Rica
+dfCUSPtrim["Costa Rica","RailLinesTotalKm"] <- smallRailLinesTotalKm
+dfCUSPtrim["Costa Rica",]
+
+# Assign values for missing data for Denmark
+dfCUSPtrim["Denmark","AirPassengersCount"] <- medAirPassengersCount
+dfCUSPtrim["Denmark",]
+
+# Assign values for missing data for Germany
+dfCUSPtrim["Germany","PovertyRatioPct"] <- medPovertyRatioPct
+dfCUSPtrim["Germany","AdolescentsOutOfSchool"] <- medAdolescentsOutOfSchool
+dfCUSPtrim["Germany",]
+
+# Assign values for missing data for Greece
+dfCUSPtrim["Greece","NewBusiRegistCount"] <- medNewBusiRegistCount
+dfCUSPtrim["Greece","AdolescentsOutOfSchool"] <- medAdolescentsOutOfSchool
+dfCUSPtrim["Greece",]
+
+# Assign values for missing data for Indonesia
+dfCUSPtrim["Indonesia","RandDResearchersPerMil"]  <- meanRandDResearchersPerMil
+dfCUSPtrim["Indonesia",]
+
+# Assign values for missing data for Pakistan
+dfCUSPtrim["Pakistan","RandDResearchersPerMil"]  <- meanRandDResearchersPerMil
+dfCUSPtrim["Pakistan","UnemploymentPct"] <- medUnemploymentPct
+dfCUSPtrim["Pakistan","PovertyRatioPct"] <- medPovertyRatioPct
+dfCUSPtrim["Pakistan",]
+
+# Assign values for missing data for Philippines
+dfCUSPtrim["Philippines","RandDResearchersPerMil"]  <- meanRandDResearchersPerMil
+dfCUSPtrim["Philippines","RailLinesTotalKm"] <- tinyRailLinesTotalKm
+dfCUSPtrim["Philippines","AdolescentsOutOfSchool"] <- medAdolescentsOutOfSchool
+dfCUSPtrim["Philippines",]
+
+# Assign values for missing data for Russia
+dfCUSPtrim["Russia","AdolescentsOutOfSchool"] <- medAdolescentsOutOfSchool
+dfCUSPtrim["Russia",]
+
+# Assign values for missing data for Saudi Arabia
+dfCUSPtrim["Saudi Arabia","NewBusiRegistCount"] <- medNewBusiRegistCount
+dfCUSPtrim["Saudi Arabia","RandDResearchersPerMil"]  <- meanRandDResearchersPerMil
+dfCUSPtrim["Saudi Arabia","HomicidesPer100000people"] <- medHomicidesPer100000people
+dfCUSPtrim["Saudi Arabia","PovertyRatioPct"] <- medPovertyRatioPct
+dfCUSPtrim["Saudi Arabia","AdolescentsOutOfSchool"] <- medAdolescentsOutOfSchool
+dfCUSPtrim["Saudi Arabia",]
+
+# Assign values for missing data for Singapore
+dfCUSPtrim["Singapore","RailLinesTotalKm"] <- tinyRailLinesTotalKm
+dfCUSPtrim["Singapore","PovertyRatioPct"] <- medPovertyRatioPct
+dfCUSPtrim["Singapore","AdolescentsOutOfSchool"] <- medAdolescentsOutOfSchool
+dfCUSPtrim["Singapore",]
+
+# Assign values for missing data for South Africa
+dfCUSPtrim["South Africa","PovertyRatioPct"] <- medPovertyRatioPct
+dfCUSPtrim["South Africa","AdolescentsOutOfSchool"] <- medAdolescentsOutOfSchool
+dfCUSPtrim["South Africa",]
+
+# Assign values for missing data for United States
+dfCUSPtrim["United States","NewBusiRegistCount"] <- medNewBusiRegistCount
+dfCUSPtrim["United States","PovertyRatioPct"] <- medPovertyRatioPct
+dfCUSPtrim["United States",]
+
+#transform variables to make them all numeric (some were listed as strings)
+#also the unemployment variable has been multiplied by -1 (values large in magnitude are bad (negative), and small in magnitude are good (more positive))
+#the reason for transforming unemployment will become evident shortly
+dfCUSPtrim <- transform(dfCUSPtrim, NewBusiRegistCount = as.numeric(NewBusiRegistCount), 
+               RandDResearchersPerMil = as.numeric(RandDResearchersPerMil),
+               UnemploymentPct = -1 * as.numeric(UnemploymentPct), 
+               RailLinesTotalKm = as.numeric(RailLinesTotalKm),
+               HomicidesPer100000people = as.numeric(HomicidesPer100000people), 
+               PovertyRatioPct = as.numeric(PovertyRatioPct),
+               AdolescentsOutOfSchool = as.numeric(AdolescentsOutOfSchool), 
+               AirPassengersCount = as.numeric(AirPassengersCount))
+
+# Summarize descriptive statistics for dfCUSPtrim
+summary(dfCUSPtrim)
+
+#Obtain size (dimensions) of dfCUSPtrim dataset
+dim(dfCUSPtrim)
+
+# Produce Chernoff faces visualization for dfCUSPtrim (note: not all variables are plotted)
+faces(dfCUSPtrim[,3:20], col.face = cm.colors(8), main = "The faces of CUSP 2017/18 \n(and a few other countries)")
+
+
+
+
+
+
+
+
+
+
+
+
+
