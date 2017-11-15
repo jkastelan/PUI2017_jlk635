@@ -15,7 +15,7 @@ The visualization I have chosen is a plot of Chernoff faces. I compiled a series
 <kbd>![alt text](HW8_jlk635_Chernoff_faces_in_R.png "Chernoff faces of CUSP 2017/18 (and a few other countries)")</kbd>
 
 #### Legend
-The variables represented by the Chernoff faces can be interpreted as follows:
+The variables represented by characteristics of the Chernoff faces are as follows:
 
 
 |**Variable No.** |**Chernoff face representation** |**Indicator Name** |
