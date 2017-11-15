@@ -61,12 +61,15 @@ Lastly, let's assess Unemployment by country, represented by the smiles. Happy f
 
 
 
+
 ## What are Chernoff faces and why are they useful?
 
 Chernoff faces were invented by the statistician Herman Chernoff in the early 70s as a method to display multivariate data on a human face. The idea behind using faces is that humans easily recognize and relate to faces and notice small changes without difficulty. 
 
 Each day we see hundreds of faces, and our brains are busy computing patterns to determine if we recognise someone we know and respond accordingly. They're relatable, and humans naturally form an emotional connection to faces (unlike a bar chart or scatter plot), because we spend our days reading, interpretting (processing), and assessing whether we like it or not, judging faces - what 'looks good' and what doesn't.
 
+Here's a nice link to another analysis looking at the Faces of Crime (by state) in the United States
+[The Faces of Crime](http://flowingdata.com/2010/08/31/how-to-visualize-data-with-cartoonish-faces/crime-chernoff-faces-by-state-edited-2/)
 
 
 
