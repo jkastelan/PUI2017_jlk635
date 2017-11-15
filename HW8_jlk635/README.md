@@ -1,5 +1,7 @@
 
 
+
+
 # PUI - Homework 8
 
 ## Jon Kastelan
@@ -74,7 +76,9 @@ Here's a nice link to another analysis looking at [The Faces of Crime](http://fl
 
 ## Data sources and processing
 
-The Data was sourced from the World Bank: World Development indicators (WDI) [website](https://data.worldbank.org/data-catalog/world-development-indicators). The indicator name, code, definition and source are provided below. The year selected was 2012.
+The Data was sourced from the World Bank: World Development indicators (WDI) [website](https://data.worldbank.org/data-catalog/world-development-indicators). The indicator name, code, definition and source are provided at the bottom of this section. The year selected was **2012**.
+
+Data was missing for a particular variables in specific countries. In the case of missing data, a value was assigned based on one of median, mean or quantiles, depending on which of the variables were missing and obeserved skewness of the variable across countries for which information was available (e.g. the mean CO2 emissions may have been skewed by larger polluters, so a median was used instead).  
 
 
 |**Variable No.** |**Indicator Name** |**Code** |**Long definition**                    |**Source** |
@@ -103,7 +107,4 @@ The Data was sourced from the World Bank: World Development indicators (WDI) [we
 
 
 ## Visualisation self-assessment and critique
-
-
-
 
