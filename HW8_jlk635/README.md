@@ -18,8 +18,7 @@ The visualization I have chosen is a plot of Chernoff faces. I compiled a series
 The variables represented by the Chernoff faces can be interpreted as follows:
 
 
-
-| **Statistical Analyses	|  IV(s)  |  IV type(s) **|
+| **Statistical Analyses	|  IV(s)  |  IV type(s) |  DV(s)  |  DV type(s)  |  Control Var | Control Var type  | Question to be answered | _H0_ | alpha | link to paper **| 
 |:----------:|:----------|:------------|:-------------|:-------------|:------------|:------------- |:------------------|:----:|:-------:|:-------|
 Chi-squared |	2, Gender, Age |	Gender: Nominal, Age: Ordinal |	1, Visual Stress (VS) |	Ordinal (reduction in VS) |	2, Overlay colour, Age |	Overlay colour: Nominal |	Does Gender Influence Colour Choice in the Treatment of Visual Stress? |	No difference between overlay colour in treatment of visual stress for either gender |	0.15 |	http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0163326 |
 Multivariate Regression |	2, Palmer Drought Severity Index (PDSI), and Year |	PDSI: Continuous ordinal, Year: Interval |	1, Normalized Difference Vegetation Index (NDVIt) (natural logarithm is fitted) |	Continuous |	 |	 |	Do climate (PDSI) and non-climatic (Year) factors impact Normalised difference in Vegetation (NDVI) in Northwest China |	PDSI and/or Year have no effect on NDVI in Northwest China |	0.05 |	http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0126044 |
