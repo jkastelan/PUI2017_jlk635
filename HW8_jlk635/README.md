@@ -1,3 +1,4 @@
+
 # PUI - Homework 8
 
 ## Jon Kastelan
@@ -51,11 +52,11 @@ Likewise for the Central and South American countries, we see good similarities 
 
 Assessing the countries which are very different to others, the United States, China, Germany, Russia and South Africa all appear very different (although worth noting China and the US look most similar to eachother compared to other countries). It is interesting to note that Canada appears more similar to Australia, rather than the United States; even though the Canada and the US are closer in geographical proximity.
 
-Comparing key features, the ears of Pakistan, Israel, the Philippines and South Africa appear to be the biggest amongst all countries. The ears represent the two variables Fertility rate and Intentional homicides (per 100,000 people), which indicate both reproductive rates and avoidable deaths are higher in these countries.
+Comparing key features, the ears of Pakistan, Israel, the Philippines and South Africa appear to be the biggest amongst all countries. The ears represent the two variables Fertility rate and Intentional homicides (per 100,000 people), which indicate both reproductive rates and avoidable deaths are higher in these countries. Russia and South Africa have the highest crude death rates (deaths per 1,000 people) as indicated by the width of their faces.
 
 Larger noses in China, Russia and the United States represent both the total size of military force (nose length), and total km of rail ines (nose width).
 
-The style of hair in China and the United States represent the number of Scientific and technical journal articles published which is higher in those countries. And looking at the % of population using the Internet by country represented by the height of the hair, this is larger for the US, China, Denmark, Germany and Russia; and lower for Greece, Pakistan and Indonesia.
+The style of hair in China and the United States represent the number of Scientific and technical journal articles published which is higher in those countries. And looking at the % of population using the Internet by country represented by the height of the hair, this is larger for the US, China, Denmark, Germany and Russia; and lower for Greece, Pakistan and Indonesia. China and the US are also the largest polluters based on CO2 emissions (kt), total; represented by the height of the face.
 
 Lastly, let's assess Unemployment by country, represented by the smiles. Happy faces represent low unemployment, and sad faces represent higher unemployment. Singapore, South Korea and Germany appear to have the lowest unemployment rates; whilst Armenia, Spain, Greece and South Africa have higher rates of Unemployment.
 
@@ -119,3 +120,5 @@ Lastly, I left a couple of countries out (accidently.., whoops). I'd include Ind
 
 ** Hope you enjoyed the analysis, feedback welcome! (email: jlk635 at nyu.edu)**
 **Thank you **
+
+
