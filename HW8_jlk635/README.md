@@ -1,3 +1,4 @@
+
 # PUI - Homework 8
 
 ## Jon Kastelan
@@ -7,7 +8,7 @@
 
 # The Chernoff faces of CUSP 2017/18
 
-The visualization I have chosen is a plot of Chernoff faces. I compiled a series of aggregate country level statistics for each of the countries represented by CUSP students in the 2017/18 class (along with a few additional misc. countries for comparison purposes). The statistics were mainly urban in nature, and could relate to the overall economy, mobility, health, education, technology, industry and law and order. A summary of the data is provided in the data section later. The code is also provided for reference.
+The visualization I have chosen is a plot of **Chernoff faces**. I compiled a series of aggregate country level statistics for each of the countries represented by CUSP students in the 2017/18 class - along with a few additional misc. countries for comparison purposes. The statistics were mainly urban in nature, relating to the overall economy, mobility, health, education, technology, industry and law and order. A summary of the data is provided in the data section later. The code is also provided in the repo for reference.
 
 
 ## Visualisation
@@ -117,3 +118,4 @@ Lastly, I left a couple of countries out (accidently.., whoops). I'd include Ind
 
 ** Hope you enjoyed the analysis, feedback welcome! (email: jlk635 at nyu.edu)**
 **Thank you **
+
