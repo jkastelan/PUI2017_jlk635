@@ -118,7 +118,6 @@ It would be good also to include the legend as part of the chart, rather than be
 
 Lastly, I left a couple of countries out (accidently.., whoops). I'd include India, Mexico and Taiwan in a follow-up piece.
 
-** Hope you enjoyed the analysis, feedback welcome! (email: jlk635 at nyu.edu)**
-**Thank you **
+**Hope you enjoyed the analysis, feedback welcome! (email: jlk635 at nyu.edu)**
 
-
+**Thank you**
