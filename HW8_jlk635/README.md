@@ -1,5 +1,3 @@
-
-
 # PUI - Homework 8
 
 ## Jon Kastelan
@@ -47,7 +45,7 @@ The Chernoff faces provide a novel representation of each of the countries with 
 
 Let's start with a simple comparison of countries which look similar. One notes a strong geographical correlation by continent. Note: the variable 'Continent' **is not** included in our analysis, however one can observe similar faces amongst a lot of the European countries e.g. Armenia, Denmark, France, Greece, Spain, and the United Kingdom. The notable omission here is Germany which appears to have different GDP per capita, larger refugee population, and mobile phone subscription rates than other comparable European countries.
 
-Likewise for the South American countries, we see good similarities in the faces for Argentina, Brazil, Chile, Colombia and Costa Rica.
+Likewise for the Central and South American countries, we see good similarities in the faces for Argentina, Brazil, Chile, Colombia and Costa Rica.
 
 Assessing the countries which are very different to others, the United States, China, Germany, Russia and South Africa all appear very different (although worth noting China and the US look most similar to eachother compared to other countries). It is interesting to note that Canada appears more similar to Australia, rather than the United States; even though the Canada and the US are closer in geographical proximity.
 
@@ -64,9 +62,9 @@ Lastly, let's assess Unemployment by country, represented by the smiles. Happy f
 
 ## What are Chernoff faces and why are they useful?
 
-Chernoff faces were invented by the statistician Herman Chernoff in the early 70s as a method to display multivariate data on a human face. The idea behind using faces is that humans easily recognize and relate to faces and notice small changes without difficulty. 
+Chernoff faces were invented by the statistician Herman Chernoff in the early 1970's as a method to display multivariate data on a human face. The idea behind using faces is that humans easily recognize and relate to faces and notice small changes without difficulty. 
 
-Each day we see hundreds of faces, and our brains are busy computing patterns to determine if we recognise someone we know and respond accordingly. They're relatable, and humans naturally form an emotional connection to faces (unlike a bar chart or scatter plot), because we spend our days reading, interpretting (processing), and assessing whether we like it or not, judging faces - what 'looks good' and what doesn't.
+Each day we see hundreds of faces, and our brains are busy computing patterns to determine if we recognise someone we know and respond accordingly. They're relatable, and humans naturally form an emotional connection to faces (unlike a bar chart or scatter plot), because we spend our days reading, interpretting (processing), and assessing whether we like it or not. Judging faces - what 'looks good' and what doesn't.
 
 Here's a nice link to another analysis looking at [The Faces of Crime](http://flowingdata.com/2010/08/31/how-to-visualize-data-with-cartoonish-faces/crime-chernoff-faces-by-state-edited-2/) (by state) in the United States.
 
@@ -74,9 +72,9 @@ Here's a nice link to another analysis looking at [The Faces of Crime](http://fl
 
 ## Data sources and processing
 
-The Data was sourced from the World Bank: World Development indicators (WDI) [website](https://data.worldbank.org/data-catalog/world-development-indicators). The indicator name, code, definition and source are provided at the bottom of this section. The year selected was **2012**.
+The data for this analysis was sourced from the World Bank: World Development indicators (WDI) [website](https://data.worldbank.org/data-catalog/world-development-indicators). The indicator name, code, definition and source are provided at the bottom of this section. The year selected was **2012**.
 
-Data was missing for a particular variables in specific countries. In the case of missing data, a value was assigned based on one of median, mean or quantiles, depending on which of the variables were missing and obeserved skewness of the variable across countries for which information was available (e.g. the mean CO2 emissions may have been skewed by larger polluters, so a median was used instead).  
+Data was missing for a few variables in specific countries. In the case of missing data, a value was assigned based on one of median, mean or quantiles, depending on which of the variables were missing and obeserved skewness of the variable across countries for which information was available (e.g. the mean CO2 emissions may have been skewed by larger polluters, so a median was used instead).  
 
 
 |**Variable No.** |**Indicator Name** |**Code** |**Long definition**|**Source** |
@@ -107,16 +105,15 @@ Data was missing for a particular variables in specific countries. In the case o
 ## Visualisation self-assessment and critique
 Overall, the visualisation looks nice and provides an interesting way to compare and contrast many variable across countries.
 
-For the data munging part, it would have been nice to visualize the additional variables we had available; Poverty, Adolescent school attendance and Air traffic, we could have potentially visualized with a neck width, neck length and shoulder breadth. There were a few crude assumptions made to populate missing data. Specifically, assigning median or quantile values to the countries with missing values for selected variables could be improved in a follow-up analysis to obtain more applicable figures. We could also use more current data - 2012 is a little dated now.
+For the data munging part, it would have been nice to visualize the additional variables we had available; Poverty %, Adolescent school attendance % and Air traffic passengers, which we could have potentially visualized with a neck width, neck length and shoulder breadth. There were a few crude assumptions made to populate missing data. Specifically, assigning median or quantile values to the countries with missing values for selected variables could be improved in a follow-up analysis to obtain more applicable figures. We could also use more current data - 2012 is a little dated now.
 
 The graphics in this package look a little 1990's, so perhaps this could be improved for a more visual and meaningful insight. 
 
 The color scheme isn't perfect either, and with further time I'd look to enhance this, potentially remove color all together and present outlines of faces which would put more emphasis on the shapes and sizes of observed features (rather than color).
 
-It would be good also to include the legend as part of the chart, rather than below, or use a visual representation of the legend, similar to the example in The Faces of Crime dataset.
+It would be good also to include the legend as part of the chart, rather than below. A visual representation of the legend, similar to the example in The Faces of Crime dataset would also benefit.
 
 Lastly, I left a couple of countries out (accidently.., whoops). I'd include India, Mexico and Taiwan in a follow-up piece.
 
 ** Hope you enjoyed the analysis, feedback welcome! (email: jlk635 at nyu.edu)**
 **Thank you **
-
