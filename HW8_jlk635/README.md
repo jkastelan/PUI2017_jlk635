@@ -1,3 +1,5 @@
+
+
 # PUI - Homework 8
 
 ## Jon Kastelan
@@ -105,7 +107,7 @@ Data was missing for a particular variables in specific countries. In the case o
 ## Visualisation self-assessment and critique
 Overall, the visualisation looks nice and provides an interesting way to compare and contrast many variable across countries.
 
-For the data munging part, there were a few crude assumptions made to populate missing data. Specifically, assigning median or quantile values to the countries with missing values for selected variables could be improved in a follow-up analysis to obtain more applicable figures.
+For the data munging part, there were a few crude assumptions made to populate missing data. Specifically, assigning median or quantile values to the countries with missing values for selected variables could be improved in a follow-up analysis to obtain more applicable figures. We could also use more current data - 2012 is a little dated now.
 
 The graphics in this package look a little 1990's, so perhaps this could be improved for a more visual and meaningful insight. 
 
@@ -117,3 +119,4 @@ Lastly, I left a couple of countries out (accidently.., whoops). I'd include Ind
 
 ** Hope you enjoyed the analysis, feedback welcome! (email: jlk635 at nyu.edu)**
 **Thank you **
+
