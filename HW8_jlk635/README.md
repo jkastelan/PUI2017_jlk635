@@ -107,7 +107,7 @@ Data was missing for a particular variables in specific countries. In the case o
 ## Visualisation self-assessment and critique
 Overall, the visualisation looks nice and provides an interesting way to compare and contrast many variable across countries.
 
-For the data munging part, there were a few crude assumptions made to populate missing data. Specifically, assigning median or quantile values to the countries with missing values for selected variables could be improved in a follow-up analysis to obtain more applicable figures. We could also use more current data - 2012 is a little dated now.
+For the data munging part, it would have been nice to visualize the additional variables we had available; Poverty, Adolescent school attendance and Air traffic, we could have potentially visualized with a neck width, neck length and shoulder breadth. There were a few crude assumptions made to populate missing data. Specifically, assigning median or quantile values to the countries with missing values for selected variables could be improved in a follow-up analysis to obtain more applicable figures. We could also use more current data - 2012 is a little dated now.
 
 The graphics in this package look a little 1990's, so perhaps this could be improved for a more visual and meaningful insight. 
 
