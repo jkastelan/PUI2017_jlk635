@@ -29,7 +29,9 @@ The data is retrieved from http://www1.nyc.gov/assets/nypd/downloads/excel/analy
    1. Clarity
    2. Aesthetics and selection of visual representation for information presentation
    3. Overall assessment (opinion)
-    
+
+#  
+  
 ## Clarity
 
 The plot is an interesting representation of information - the seven major felony offenses in NYC for years 2000-2016. The plot shows each year represented by a different face, and features on the face represent a specific felony type for that given year.
