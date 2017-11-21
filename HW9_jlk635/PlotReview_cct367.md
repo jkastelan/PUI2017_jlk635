@@ -22,13 +22,13 @@ The plot is a clear visual, showing how temperature and humidity vary over time.
 
 To make the chart even more impactful, here's a list of modifications you could incorporate:
 
-**1. Plot title:** Make it meaningful and interesting. What are you plotting the temperature and humidity of? If it the mean values of this for NYC? Is it mean value of these variables across subway stations? Try to give the reader some idea of why you're plotting this in the title also. You want it to be thought provoking, and pique their interest. Make it bigger and bold too.
+**1. Plot title:** Make it meaningful and interesting. What are you plotting the temperature and humidity of? Is it the mean values of this for NYC? Is it mean value of these variables across subway stations? Try to give the reader some idea of why you're plotting this in the title also. You want it to be thought provoking, and pique their interest. Make it bigger and bold too.
 
 **2. Legend:** Make it easier for your reader to interpret. Make it bigger. At the moment, it's like an eye test to understand.
 
 **3. Chart Axes:** The variables you're plotting may not be in the same units, but the chart appears like they are comparable. I'm assuming temperature is in degrees Farenheit, and Humidity is a percentage (max 100%). This isn't clear on the chart. Make it clear, update the y-axis label to something other than 'sample mean'. Similar for x-axis, it's labelled 'day time' - what you mean is 'time of day', or the 'hour'. If it's hour, it's also not clear which hour corresponds with what time? Is zero (0) midnight? You could represent this as time using 2400hr clock; it's a small change and gives the reader **much more information** about what they're looking at.
 
-**Gridlines:** Consider using gridlines on both the x and y-axis. Some faint grey lines would help readability and not distract much from the data - consider including. Good for the ink-to-information ratio.
+**4. Gridlines:** Consider using gridlines on both the x and y-axis. Some faint grey lines would help readability and not distract much from the data - consider including. Good for the ink-to-information ratio.
 
 
 ## Aesthetics and selection of visual representation for information presentation
