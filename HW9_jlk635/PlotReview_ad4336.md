@@ -1,7 +1,7 @@
 
  # Homework 9
  
- ### Review of plot by Chun-Chieh Tsai
+ ### Review of plot by Assel Dmitriyeva
  
  #### Completed by #JKtours (Jonathan Kastelan)
 
