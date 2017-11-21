@@ -6,11 +6,29 @@
 
 ![alt text](Chart_gc2300.jpeg "Chart by Guobing Chen")
 
+The height, width and structure of face denote the total number of seven major felony offenses in each year.
+
+The height and width of mouth denote the number of murder & NON-NEGL manslaugter.
+
+The smiling denotes the number of rape.
+
+The height and width of eyes denote the number of robbery.
+
+The height and width of hair denote the number of felony assault.
+
+The style of hair denotes the number of burglary.
+
+The height and width of nose denote the number of grand larceny.
+
+The width and height of ear denote the number of grand larceny of motor vehicle.
+
+The data is retrieved from http://www1.nyc.gov/assets/nypd/downloads/excel/analysis_and_planning/seven-major-felony-offenses-2000-2016.xls.
+
 
 #### The review comprises three parts:
-    1. Clarity
-    2. Aesthetics and selection of visual representation for information presentation
-    3. Overall assessment (opinion)
+   1. Clarity
+   2. Aesthetics and selection of visual representation for information presentation
+   3. Overall assessment (opinion)
     
 ## Clarity
 
@@ -35,9 +53,12 @@ Nice chart. Presents a unique representation of this information. You might cons
 The plot presents the information accurately, although may be hard to interpret precisely, particularly with reference to the colors - it's not clear which color is large vs. small.
 
 You might also improve the plot using a more visual legend such as the one presented here for the [Faces of Crime in the US](http://flowingdata.com/2010/08/31/how-to-visualize-data-with-cartoonish-faces/crime-chernoff-faces-by-state-edited-2/), or some basic changes to the legend which present **Attribute**: followed by **variable** (or vice-versa). 
+
 e.g. **Style of hair:** number of burglaries
 
 Also, you may want to remove additional words (such as *'the'*, *'height and width'*, *'denote'*) which create noise from what the reader is trying to determine by looking at the legend. A table format may also be suitable.
+
+
 
 *I chose to do **Chernoff faces** for my plot also, so maybe I'm a biased big fan!* 
 
