@@ -5,7 +5,7 @@
  
  #### Completed by #JKtours (Jonathan Kastelan)
 
-![alt text](Chart_cct367.jpeg "Chart by Chun-Chieh Tsai")
+![alt text](https://github.com/jkastelan/PUI2017_jlk635/blob/master/HW9_jlk635/Chart_cct367.jpeg "Chart by Chun-Chieh Tsai")
 
 
 

@@ -4,7 +4,7 @@
  
  #### Completed by #JKtours (Jonathan Kastelan)
 
-![alt text](Chart_gc2300.jpeg "Chart by Guobing Chen")
+![alt text](https://github.com/jkastelan/PUI2017_jlk635/blob/master/HW9_jlk635/Chart_gc2300.jpeg "Chart by Guobing Chen")
 
 The height, width and structure of face denote the total number of seven major felony offenses in each year.
 

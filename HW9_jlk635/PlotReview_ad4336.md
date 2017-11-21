@@ -5,7 +5,7 @@
  
  #### Completed by #JKtours (Jonathan Kastelan)
 
-![alt text](Chart_ad4336.jpeg "Chart by Assel Dmitriyeva")
+![alt text](https://github.com/jkastelan/PUI2017_jlk635/blob/master/HW9_jlk635/Chart_ad4336.jpeg "Chart by Assel Dmitriyeva")
 
 #### The review comprises three parts:
    1. Clarity
