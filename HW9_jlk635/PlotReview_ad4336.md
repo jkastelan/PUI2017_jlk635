@@ -39,6 +39,9 @@ Choice of colors to contrast the star ratings seems reasonable with green repres
 
 Also, you have lots of good stats reported here, and what we're interested in is how star rating have changed over time and/or differ between location. And specifically, we might only be interested in the ratings given a 5 or 1, or above/below 3, so you could consider simplifying the numbers reported to these specific figures. And a 100% stacked bar might also suit this well to compare across time, or between locations.
 
+# FBB 
+also the pale green is virtually invisible
+
 
 ## Overall assessment (opinion)
 
@@ -50,4 +53,6 @@ You may also like to switch positions of the 5-star and 1-star (and 4-star and 2
 
 **Well done!**
 
+# FBB good
+10/10
 
