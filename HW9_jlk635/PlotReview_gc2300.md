@@ -66,4 +66,14 @@ Also, you may want to remove additional words (such as *'the'*, *'height and wid
 
 **WELL DONE!**
 
+# FBB there is a severe issue with this figure:
+when dealing with crime and such sensitive issues we need to be careful with hidden messsages in a plot. 
+In this map "smiling denotes the number of rape". This is a terrible choice that may lead to think the message is that rape is good. and even if it does not lead to think it it does not convey rape as negative, because as you sayd "faces create an emotional connection between the reader and data. Humans are very good at reading faces," 
+This goes both ways: we have an emotional response to the esthetic of the plot which in this case should not math the emotional response the numbers on this topic should arise. 
+
+The moral is that not all data is suitable to be plotted in any ways: Chernoff faces are fun, and informative, but should not be used on a topic that is not neutral to avoid sending the wrong message or causing conflicting responses in the reader
+
+(I reviewed and graded the other 2 plot reviews 10/10 each. I woudl have graded this 9/10 but you get 20/20 from the other plots)
+
+
 
