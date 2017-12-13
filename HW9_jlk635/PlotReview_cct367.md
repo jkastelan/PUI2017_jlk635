@@ -28,6 +28,9 @@ To make the chart even more impactful, here's a list of modifications you could 
 
 **3. Chart Axes:** The variables you're plotting may not be in the same units, but the chart appears like they are comparable. I'm assuming temperature is in degrees Farenheit, and Humidity is a percentage (max 100%). This isn't clear on the chart. Make it clear, update the y-axis label to something other than 'sample mean'. Similar for x-axis, it's labelled 'day time' - what you mean is 'time of day', or the 'hour'. If it's hour, it's also not clear which hour corresponds with what time? Is zero (0) midnight? You could represent this as time using 2400hr clock; it's a small change and gives the reader **much more information** about what they're looking at.
 
+# FBB 
+a common solution to the issue of representing 2 variables with different scales and units in the same plot is to plot a left and a right axis, with axis tick and labels asa pprioprioate, one referring to a variable and the other to the second variable, and metch the colors of the axis label with the color of the variables in the graphic
+
 **4. Gridlines:** Consider using gridlines on both the x and y-axis. Some faint grey lines would help readability and not distract much from the data - consider including. Good for the ink-to-information ratio.
 
 
@@ -51,3 +54,7 @@ Similarly for temperature which appears constant between *hours 3 and 7*, and ag
 Nice job anyhow - and hopefully you find the assessment useful.
 
 
+
+# FBB good
+
+10/10
